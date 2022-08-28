@@ -20,14 +20,14 @@ public:
 		  number = n; suit = s;
 		  return true;
 	  }
-	  void show() {
-		  if (number == 11) cout << "J"; else if (number == 12) cout << "Q"; else if (number == 13) cout << "K"; else if (number == 14) cout << "A"; else cout << number;
+	  void show() { //display a card from the deck
+		  if (number == 11) cout << "J"; else if (number == 12) cout << "Q"; else if (number == 13) cout << "K"; else if (number == 14) cout << "A"; else cout << number; //Output JQKA for Jack, Queen, King, and Ace respectively.
 		  if (suit == 1) cout << static_cast<char>(5);
-		  else if (suit == 2) cout << static_cast<char>(4); else if (suit == 3) cout << static_cast<char>(3); else if (suit == 4) cout << static_cast<char>(6);
+		  else if (suit == 2) cout << static_cast<char>(4); else if (suit == 3) cout << static_cast<char>(3); else if (suit == 4) cout << static_cast<char>(6); //Output the suit symbol
 	  }
 	  bool equals(playing_card pc) { if (pc.number == number && pc.suit == suit) return true; else return false; }
 };
-class cardDeck {
+class cardDeck { //We will now initialize an array of 52 playing cards; or a card deck.
 private:
 
 public:
