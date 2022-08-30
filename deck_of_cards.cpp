@@ -64,7 +64,7 @@ int main() {
 		int hand_rank = -1; if ((c1.number == 10) && (c2.number == 11) && (c3.number == 12) && (c4.number == 13) && (c5.number == 14) && ((c1.suit == c2.suit) && (c1.suit == c3.suit) && (c1.suit == c4.suit) && (c1.suit == c5.suit))) { //royal flush
 			hand_rank = 1;
 		}
-
+		//Define the hand types
 		else if ((c1.number == (c2.number - 1)) && (c1.number == (c3.number - 2)) && (c1.number == (c4.number - 3)) && (c1.number == (c5.number - 4)) && ((c1.suit == c2.suit) && (c1.suit == c3.suit) && (c1.suit == c4.suit) && (c1.suit == c5.suit))) { //straight flush
 			hand_rank = 2; } else if ((c1.number == c2.number) && (c1.number == c3.number) && (c1.number == c4.number) || ((c2.number == c3.number) && (c2.number == c4.number) && (c2.number == c5.number))){ //four of a kind
 			hand_rank = 3; } else if (((c1.number == c2.number) && (c3.number == c4.number && (c3.number == c5.number)) || ((c1.number == c2.number) && (c1.number == c3.number) && (c4.number == c5.number)))) { //full house 
@@ -75,7 +75,7 @@ int main() {
 			hand_rank = 8; } else if ((c1.number == c2.number) || (c2.number == c3.number) || (c3.number == c4.number) || (c4.number == c5.number)) { //pair 
 			hand_rank = 9; } else { //high card 
 			hand_rank = 10; }
-			//tally the hands below
+			//tally the hands generated
 				if (hand_rank == 1) { royal_flush = royal_flush + 1; }
 				else if (hand_rank == 2) { straight_flush = straight_flush + 1; }
 				else if (hand_rank == 3) { four_o_kind = four_o_kind + 1; }
